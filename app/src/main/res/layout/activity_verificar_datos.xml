@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.androidhive.firebase.VerificacionDatosActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="104dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/textView_tipo_servicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Servicio"
+                    android:textColor="@color/bg_register"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView_ubicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@mipmap/ic_edit_location_black_24dp"
+                    android:textSize="18sp" />
+
+                <!--<TextView
+                    android:id="@+id/textView_Carro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@mipmap/ic_directions_car_black_24dp" />-->
+
+                <TextView
+                    android:id="@+id/tvMarca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:text="Marca"
+                    android:drawableLeft="@mipmap/ic_directions_car_black_24dp"
+                    android:textColor="@color/bg_register"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvModelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:text="Modelo"
+                    android:textColor="@color/bg_register"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:text="Color"
+                    android:textColor="@color/bg_register"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvPlacas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Placas"
+                    android:textColor="@color/bg_register"
+                    android:textSize="18sp" />
+
+                <!--<TextView
+                    android:id="@+id/textView_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:drawableLeft="@mipmap/ic_today_black_24dp" /> -->
+
+                <!--<TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:text="TOTAL"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />-->
+
+                <Button
+                    android:id="@+id/btn_fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_weight="0.48"
+                    android:text="Fecha" />
+
+                <Button
+                    android:id="@+id/btn_hora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/btn_fecha"
+                    android:layout_alignLeft="@+id/btn_fecha"
+                    android:layout_alignRight="@+id/btn_fecha"
+                    android:layout_alignStart="@+id/btn_fecha"
+                    android:layout_below="@+id/btn_fecha"
+                    android:layout_marginTop="18dp"
+                    android:layout_toStartOf="@+id/eHora"
+                    android:text="Hora" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="261dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editText_precio_servicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="$"
+                    android:inputType="textPersonName"
+                    android:textColorLink="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:id="@+id/editText_mi_ubicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColorLink="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:id="@+id/et_marca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/holo_red_light"
+                    android:textColorLink="@color/colorPrimaryDark"
+                    android:hint="Marca"/>
+
+                <!--<EditText
+                    android:id="@+id/editText_mi_carro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" /> -->
+
+                <EditText
+                    android:id="@+id/et_modelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType=""
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/white"
+                    android:textColorLink="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:id="@+id/et_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType=""
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/white"
+                    android:textColorLink="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:id="@+id/et_placas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ABC-1234"
+                    android:inputType="text"
+                    android:maxLength="8"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/holo_red_light"
+                    android:textColorLink="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
+
+               <!-- <EditText
+                    android:id="@+id/editText_mi_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" /> -->
+
+                <!--<EditText
+                    android:id="@+id/editText_pago_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="$"
+                    android:inputType="textPersonName"
+                    android:textColorLink="@color/colorPrimaryDark" />-->
+
+                <EditText
+                    android:id="@+id/eFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/btn_hora"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@+id/btn_fecha"
+                    android:layout_toRightOf="@+id/btn_fecha"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColorLink="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:id="@+id/eHora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/btn_hora"
+                    android:layout_alignEnd="@+id/eFecha"
+                    android:layout_alignRight="@+id/eFecha"
+                    android:layout_marginTop="25dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColorLink="@color/colorPrimaryDark" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button_solicitar_servicio_final"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/holo_red_light"
+        android:text="Solicitar Servicio"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+</LinearLayout>

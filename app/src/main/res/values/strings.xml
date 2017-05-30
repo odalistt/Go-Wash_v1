@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">Go-Wash</string>
+    <string name="action_sign_in_short">Registrar</string>
+    <string name="email">Email</string>
+    <string name="minimum_password">Password demasiado corto, escribe minimo 8 caracteres!</string>
+    <string name="auth_failed">Autenticacion fallida, revisa tu email y password o regístrate</string>
+    <string name="change_email">Cambiar Email</string>
+    <string name="change_password">Cambiar Password</string>
+    <string name="send_password_reset_email">Enviar password reset email</string>
+    <string name="remove_user">Iniciar/Elegir ubicación</string>
+    <string name="new_pass">Nuevo Password</string>
+    <string name="title_activity_profile">Firebase</string>
+    <string name="title_activity_login">Registrate</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_link_to_register">¿No eres miembro? Regístrese ahora en Go-Wash!</string>
+    <string name="btn_link_to_login">Registrado. Ingresar!</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="btn_forgot_password">¿Olvidaste tu password?</string>
+    <string name="btn_reset_password">Reset Password</string>
+    <string name="btn_back"><![CDATA[<< Back]]></string>
+    <string name="hint_new_email">Nuevo Email</string>
+    <string name="btn_change">Cambiar</string>
+    <string name="btn_send">Enviar</string>
+    <string name="btn_remove">Remove</string>
+    <string name="btn_about_app">Acerca de nosotros</string>
+    <string name="btn_sign_out">Salir</string>
+    <string name="lbl_forgot_password">Forgot password?</string>
+    <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="marca_prompt">Elija una marca</string>
+    <string name="modelo_prompt">Elija un modelo</string>
+    <string name="color_prompt">Selecciona el color de tu auto</string>
+
+    <string-array name="array_marcas">
+        <item>Chevrolet</item>
+        <item>Ford</item>
+        <item>Honda</item>
+        <item>Nissan</item>
+        <item>Renault</item>
+        <item>Toyota</item>
+        <item>Volkswagen</item>
+    </string-array>
+
+
+    <string-array name="array_chevrolet">
+        <item>Chevy</item>
+        <item>Spark</item>
+        <item>Aveo</item>
+        <item>Malibú</item>
+    </string-array>
+
+    <string-array name="array_ford">
+        <item>Fiesta</item>
+        <item>Ikon</item>
+        <item>Focus</item>
+        <item>Ecosport</item>
+        <item>Jetta</item>
+    </string-array>
+
+    <string-array name="array_honda">
+        <item>Civic</item>
+        <item>Accord</item>
+        <item>Pilot</item>
+    </string-array>
+
+    <string-array name="array_nissan">
+        <item>Rogue</item>
+        <item>Versa</item>
+        <item>Tiida</item>
+        <item>Sentra</item>
+        <item>Juke</item>
+    </string-array>
+
+    <string-array name="array_renault">
+        <item>Duster</item>
+        <item>Logan</item>
+        <item>Fluence</item>
+    </string-array>
+
+    <string-array name="array_toyota">
+        <item>Yaris</item>
+        <item>Spark</item>
+        <item>Aveo</item>
+    </string-array>
+
+    <string-array name="array_volkswagen">
+        <item>Jetta</item>
+        <item>Vento</item>
+        <item>Golf</item>
+        <item>Beetle Sport</item>
+    </string-array>
+
+    <string-array name="array_colores">
+        <item>Negro</item>
+        <item>Blanco</item>
+        <item>Dorado</item>
+        <item>Gris</item>
+        <item>Amarillo</item>
+        <item>Azul</item>
+
+    </string-array>
+    <string name="title_activity_options">OptionsActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

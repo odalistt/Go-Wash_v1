@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "594945751668",
+    "firebase_url": "https://washme-cc7cf.firebaseio.com",
+    "project_id": "washme-cc7cf",
+    "storage_bucket": "washme-cc7cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594945751668:android:d842af33038fad5c",
+        "android_client_info": {
+          "package_name": "info.androidhive.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594945751668-jae66psg242vlgc25qv22m5kg417dqsf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "info.androidhive.firebase",
+            "certificate_hash": "11531a8f8973ac4c9ca727e504aed20304713213"
+          }
+        },
+        {
+          "client_id": "594945751668-hl2k9lfanfo7nainqjsfpd5sto2mpa01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4VzPjU8b6ZRGpqyOaVfGZwhsEVZ9j6Gc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594945751668-hl2k9lfanfo7nainqjsfpd5sto2mpa01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

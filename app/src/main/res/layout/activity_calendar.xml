@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/btn_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="154dp"
+        android:text="Fecha" />
+
+    <EditText
+        android:id="@+id/eFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_above="@+id/btn_hora"
+        android:layout_toRightOf="@+id/btn_fecha"
+        android:layout_toEndOf="@+id/btn_fecha"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp" />
+
+    <Button
+        android:id="@+id/btn_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_fecha"
+        android:layout_alignLeft="@+id/btn_fecha"
+        android:layout_alignRight="@+id/btn_fecha"
+        android:layout_alignStart="@+id/btn_fecha"
+        android:layout_below="@+id/btn_fecha"
+        android:layout_marginTop="101dp"
+        android:layout_toStartOf="@+id/eHora"
+        android:text="Hora" />
+
+    <EditText
+        android:id="@+id/eHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_hora"
+        android:layout_alignEnd="@+id/eFecha"
+        android:layout_alignRight="@+id/eFecha"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btn_next_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp"
+        android:text="CONTINUAR" />
+</RelativeLayout>
