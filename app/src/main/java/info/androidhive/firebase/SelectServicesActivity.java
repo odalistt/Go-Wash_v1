@@ -43,6 +43,8 @@ public class SelectServicesActivity extends AppCompatActivity {
         rb2 = (RadioButton) findViewById(R.id.rb2);
         rb3 = (RadioButton) findViewById(R.id.rb3);
 
+
+
         fullAddress = getIntent().getStringExtra("KEY");
 
 
@@ -84,7 +86,7 @@ public class SelectServicesActivity extends AppCompatActivity {
                 intent.putExtra("SELECTED_ITEM", selected_option);
                 //String fullAddressD = getIntent().getStringExtra("KEY1");
                 //intent.putExtra("KEY", fullAddressD);
-                fullAddress = getIntent().getStringExtra("KEY1");
+                
                 intent.putExtra("KEY1", fullAddress);
                 startActivityForResult(intent, 0);
 

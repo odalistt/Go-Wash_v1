@@ -53,9 +53,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right|top"
             android:layout_marginTop="460dip"
-            android:background="@color/colorAccent"
-            android:text="Solicitar Servicio"
-            android:textColor="@android:color/black" />
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:text="Solicitar Servicio" />
 
 
     </FrameLayout>

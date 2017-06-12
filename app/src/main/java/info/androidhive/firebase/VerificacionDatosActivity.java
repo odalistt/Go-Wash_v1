@@ -56,6 +56,10 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
     DatabaseReference mensajeRefModelo = ref.child("Modelo");
     DatabaseReference mensajeRefColor = ref.child("Color");
     DatabaseReference mensajeRefPlacas = ref.child("Placas");
+    DatabaseReference mensajeRefUbicacion = ref.child("Ubicacion");
+    DatabaseReference mensajeRefFecha = ref.child("Fecha");
+    DatabaseReference mensajeRefHora = ref.child("Hora");
+
 
 
     @Override
@@ -93,6 +97,8 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
         editText_mi_ubicacion = (EditText) findViewById(R.id.editText_mi_ubicacion);
         //String fullAddressD = getIntent().getStringExtra("KEY");
         //editText_mi_ubicacion.setText(fullAddressD);
+        //fullAddress = getIntent().getStringExtra("KEY1");
+
         fullAddress = getIntent().getStringExtra("KEY1");
         editText_mi_ubicacion.setText(fullAddress);
         System.out.println(fullAddress);
@@ -172,6 +178,12 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
                     mensajeRefColor.setValue(mensajeColor);
                     String mensajePlacas = et_placas.getText().toString();
                     mensajeRefPlacas.setValue(mensajePlacas);
+                    String mensajeUbicacion = editText_mi_ubicacion.getText().toString();
+                    mensajeRefUbicacion.setValue(mensajeUbicacion);
+                    String mensajeFecha = eFecha.getText().toString();
+                    mensajeRefFecha.setValue(mensajeFecha);
+                    String mensajeHora = eHora.getText().toString();
+                    mensajeRefHora.setValue(mensajeHora);
 
                     if ((!mensajeMarca.matches(""))&& (!mensajeModelo.matches("")) && ((!mensajeColor.matches("")) &&
                             ((!mensajePlacas.matches(""))))) {
@@ -187,6 +199,9 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
                     et_modelo.setText("");
                     et_color.setText("");
                     et_placas.setText("");
+                    editText_mi_ubicacion.setText("");
+                    eFecha.setText("");
+                    eHora.setText("");
 
                     /*if ((!eFecha.equals(""))  &&
                             ((!eHora.equals("")))) {

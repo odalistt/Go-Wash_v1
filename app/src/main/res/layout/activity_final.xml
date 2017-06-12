@@ -96,11 +96,11 @@
             android:layout_alignLeft="@+id/textView1"
             android:layout_alignRight="@+id/textView1"
             android:layout_alignStart="@+id/textView1"
-            android:background="@color/btn_logut_bg"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:maxLines="3"
             android:padding="8dp"
             android:text="TERMINAR"
-            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
             android:textStyle="bold" />
 
     </RelativeLayout>

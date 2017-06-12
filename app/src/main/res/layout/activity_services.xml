@@ -18,11 +18,7 @@
             android:checked="false"
             android:text="Lavado exterior $139" />
 
-        <TextView
-            android:id="@+id/tvServicio1"
-            android:layout_width="98dp"
-            android:layout_height="wrap_content"
-            android:text="$139" />
+
 
 
         <RadioButton
@@ -31,11 +27,7 @@
             android:layout_height="wrap_content"
             android:text="Lavado y aspirado $159" />
 
-        <TextView
-            android:id="@+id/tvServicio2"
-            android:layout_width="98dp"
-            android:layout_height="wrap_content"
-            android:text="$159" />
+
 
 
         <RadioButton
@@ -44,11 +36,7 @@
             android:layout_height="wrap_content"
             android:text="Lavado, aspirado y cera $329" />
 
-        <TextView
-            android:id="@+id/tvServicio3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$329" />
+
 
     </RadioGroup>
 
@@ -57,6 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Siguiente"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
         android:id="@+id/btn_seleccion"/>
 
 

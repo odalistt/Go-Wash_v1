@@ -138,7 +138,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="$"
                     android:inputType="textPersonName"
                     android:textColorLink="@color/colorPrimaryDark" />
 
@@ -147,15 +146,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
+                    android:enabled="true"
+                    android:maxLines="3"
+                    android:scrollbars="vertical"
                     android:textColorLink="@color/colorPrimaryDark" />
 
                 <EditText
                     android:id="@+id/et_marca"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="text"
+                    android:digits="qwertzuiopasdfghjklñyxcvbnm,QWERTZUIOPASDFGHJKLÑYXCVBNM"
                     android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/holo_red_light"
+                    android:textColorHint="@android:color/darker_gray"
                     android:textColorLink="@color/colorPrimaryDark"
                     android:hint="Marca"/>
 
@@ -170,7 +173,8 @@
                     android:id="@+id/et_modelo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType=""
+                    android:inputType="text"
+                    android:digits="qwertzuiopasdfghjklñyxcvbnm,QWERTZUIOPASDFGHJKLÑYXCVBNM"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/white"
                     android:textColorLink="@color/colorPrimaryDark" />
@@ -179,7 +183,8 @@
                     android:id="@+id/et_color"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType=""
+                    android:inputType="text"
+                    android:digits="qwertzuiopasdfghjklñyxcvbnm,QWERTZUIOPASDFGHJKLÑYXCVBNM"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/white"
                     android:textColorLink="@color/colorPrimaryDark" />
@@ -190,10 +195,11 @@
                     android:layout_height="wrap_content"
                     android:hint="ABC-1234"
                     android:inputType="text"
+                    android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklñyxcvbnm,-,QWERTZUIOPASDFGHJKLÑYXCVBNM"
                     android:maxLength="8"
                     android:singleLine="true"
                     android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/holo_red_light"
+                    android:textColorHint="@android:color/darker_gray"
                     android:textColorLink="@color/colorPrimaryDark"
                     android:textStyle="bold" />
 
@@ -253,8 +259,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@android:color/holo_red_light"
-        android:text="Solicitar Servicio"
-        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="Solicitar Servicio" />
 
 </LinearLayout>
