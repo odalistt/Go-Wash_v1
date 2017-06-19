@@ -23,6 +23,8 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,6 +38,11 @@ import com.google.firebase.database.ValueEventListener;
 
 public class VerificacionDatosActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+
+
+
+
     Button btn_fecha, btn_hora, btn_next_fecha;
     EditText eFecha, eHora, editText_precio_servicio, editText_mi_ubicacion;
     private int dia, mes, ano, hora, minutos;
@@ -47,10 +54,19 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
     String fullAddress;
     String selected_option;
 
+
     private TextView tvMarca, tvModelo, tvColor, tvPlacas;
     private EditText et_marca, et_modelo, et_color, et_placas;
     private Button btn_enviarDatos;
-    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+    private String FIREBASE_URL = "https://washme-cc7cf.firebaseio.com/";
+    private String FIREBASE_CHILD = "test";
+
+
+    DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("<id_usuario>");
+    //DatabaseReference usuariosRef = ref.child("usuarios");
+
+    //FirebaseAuth.getInstance().getCurrentUser();
+    //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     DatabaseReference mensajeRef = ref.child("Datos-Auto");
     DatabaseReference mensajeRefMarca = ref.child("Marca");
     DatabaseReference mensajeRefModelo = ref.child("Modelo");
@@ -59,6 +75,8 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
     DatabaseReference mensajeRefUbicacion = ref.child("Ubicacion");
     DatabaseReference mensajeRefFecha = ref.child("Fecha");
     DatabaseReference mensajeRefHora = ref.child("Hora");
+    DatabaseReference mensajeRefServicio = ref.child("Servicio");
+
 
 
 
@@ -66,7 +84,7 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verificar_datos);
-
+        
 
         tvMarca = (TextView)findViewById(R.id.tvMarca);
         et_marca = (EditText)findViewById(R.id.et_marca);
@@ -90,7 +108,7 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
 
 
         editText_precio_servicio = (EditText) findViewById(R.id.editText_precio_servicio);
-        String selected_option = getIntent().getStringExtra("SELECTED_ITEM");
+        selected_option = getIntent().getStringExtra("SELECTED_ITEM");
         editText_precio_servicio.setText(selected_option);
         textView_tipo_servicio = (TextView) findViewById(R.id.textView_tipo_servicio);
 
@@ -167,11 +185,13 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
         super.onResume();
         //btn_next_fecha = (Button)findViewById(R.id.btn_next_fecha);
         button_solicitar_servicio_final = (Button) findViewById(R.id.button_solicitar_servicio_final);
+
             button_solicitar_servicio_final.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     String mensajeMarca = et_marca.getText().toString();
                     mensajeRefMarca.setValue(mensajeMarca);
+                    //usuariosRef.child("marca").setValue(mensajeMarca);
                     String mensajeModelo = et_modelo.getText().toString();
                     mensajeRefModelo.setValue(mensajeModelo);
                     String mensajeColor = et_color.getText().toString();
@@ -184,11 +204,19 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
                     mensajeRefFecha.setValue(mensajeFecha);
                     String mensajeHora = eHora.getText().toString();
                     mensajeRefHora.setValue(mensajeHora);
+                    //mensajeRefHora.push().setValue(mensajeHora);
+                    String mensajeServicios = editText_precio_servicio.getText().toString();
+                    mensajeRefServicio.setValue(mensajeServicios);
 
                     if ((!mensajeMarca.matches(""))&& (!mensajeModelo.matches("")) && ((!mensajeColor.matches("")) &&
                             ((!mensajePlacas.matches(""))))) {
-                        Intent button_solicitar_servicio_final = new Intent(VerificacionDatosActivity.this, PayPalActivity.class);
-                        startActivity(button_solicitar_servicio_final);
+
+                        Intent siguiente = new Intent(VerificacionDatosActivity.this, PayPalActivity.class);
+                        siguiente.putExtra("SERVICIO", selected_option);
+                        startActivity(siguiente);
+
+                        //Intent button_solicitar_servicio_final = new Intent(VerificacionDatosActivity.this, PayPalActivity.class);
+
 
                     }
                     else {
@@ -218,6 +246,10 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
                 }
             });
         }
+
+
+
+
 
             /*button_solicitar_servicio_final.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -249,7 +281,7 @@ public class VerificacionDatosActivity extends AppCompatActivity implements View
                 }
             }
                     ,dia, mes, ano);
-            datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
             datePickerDialog.show();
 
 
