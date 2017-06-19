@@ -174,7 +174,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:digits="qwertzuiopasdfghjklñyxcvbnm,QWERTZUIOPASDFGHJKLÑYXCVBNM"
+                    android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklñyxcvbnm,QWERTZUIOPASDFGHJKLÑYXCVBNM"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/white"
                     android:textColorLink="@color/colorPrimaryDark" />
@@ -196,7 +196,7 @@
                     android:hint="ABC-1234"
                     android:inputType="text"
                     android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklñyxcvbnm,-,QWERTZUIOPASDFGHJKLÑYXCVBNM"
-                    android:maxLength="8"
+                    android:maxLength="15"
                     android:singleLine="true"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/darker_gray"
