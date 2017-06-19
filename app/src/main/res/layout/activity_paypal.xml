@@ -5,13 +5,30 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="info.androidhive.firebase.PayPalActivity">
+    tools:context="info.androidhive.firebase.PayPalActivity"
+    android:weightSum="1">
 
+
+    <TextView
+        android:id="@+id/pagoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.66"
+        android:layout_x="-8dp"
+        android:layout_y="413dp"
+        android:background="@color/common_plus_signin_btn_text_dark_pressed"
+        android:textAlignment="viewStart"
+        android:textColor="@color/bg_register"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="471dp"/>
+        android:layout_height="391dp">
+
+    </WebView>
+
 
     <Button
         android:id="@+id/btn_omitir"
@@ -19,7 +36,6 @@
         android:layout_height="wrap_content"
         android:background="@android:color/holo_purple"
         android:text="Omitir pago" />
-    
 
 
 </LinearLayout>
