@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * Created by Tania on 14/05/2017.
@@ -17,10 +19,20 @@ public class PayPalActivity extends AppCompatActivity {
 
     private WebView webView;
     Button btn_omitir;
+    TextView pagoTextView;
+    String selected_option;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paypal);
+
+
+
+        TextView pagoTextView = (TextView) findViewById(R.id.pagoTextView);
+        selected_option = getIntent().getStringExtra("SERVICIO");
+        selected_option = getIntent().getStringExtra("SERVICIO");
+        pagoTextView.setText("Servicio solicitado: " + selected_option);
+
 
         String  url = "https://www.paypal.me/GoWashApp";
 
