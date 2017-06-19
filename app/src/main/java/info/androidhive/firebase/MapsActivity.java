@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -34,6 +35,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     Button siguiente;
     TextView messageTextView, ubicacionTextView, mesageTextView;
+    EditText locationSearch;
     private GoogleMap mMap;
     private Marker marcador, marcador1, marcador2, marcador3, marcador4, marcador5, marcador6,
             marcador7, marcador8, marcador9, marcador10, marcador11;
@@ -115,90 +117,91 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .position(coordenadas)
                 .draggable(true)
                 .title("Mi posición actual")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+                .snippet("Tu ubicación es: " + fullAddress)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
         mMap.animateCamera(miUbicacion);
 
         LatLng lugar1 = new LatLng(19.2886892, -98.9412734);
         marcador1 = mMap.addMarker(new MarkerOptions()
                 .position(lugar1)
-                .draggable(true)
+                .draggable(false)
                 .title("Washer Disponible")
-                .snippet("Washer Disponible")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car_demo)));
+                .snippet("Disponible")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
 
         LatLng lugar2 = new LatLng(19.288453, -98.942302);
         marcador2 = mMap.addMarker(new MarkerOptions()
                 .position(lugar2)
-                .draggable(true)
+                .draggable(false)
                 .title("Washer Disponible")
-                .snippet("Washer Disponible")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car_demo)));
+                .snippet("Disponible")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
 
         LatLng lugar3 = new LatLng(19.289926, -98.943209);
         marcador3 = mMap.addMarker(new MarkerOptions()
                 .position(lugar3)
-                .draggable(true)
+                .draggable(false)
                 .title("Washer Disponible")
-                .snippet("Washer Disponible")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car_demo)));
+                .snippet("Disponible")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
 
         LatLng lugar4 = new LatLng(19.290923, -98.940607);
         marcador4 = mMap.addMarker(new MarkerOptions()
                 .position(lugar4)
-                .draggable(true)
+                .draggable(false)
                 .title("Washer Disponible")
-                .snippet("Washer Disponible")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car_demo)));
+                .snippet("Disponible")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
 
         LatLng lugar5 = new LatLng(19.289622, -98.939180);
         marcador5 = mMap.addMarker(new MarkerOptions()
                 .position(lugar5)
-                .draggable(true)
+                .draggable(false)
                 .title("Washer Disponible")
-                .snippet("Washer Disponible")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car_demo)));
+                .snippet("Disponible")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
 
         //upiicsa
 
         LatLng lugar10 = new LatLng(19.396608, -99.095768);
         marcador10 = mMap.addMarker(new MarkerOptions()
                 .position(lugar10)
-                .draggable(true)
+                .draggable(false)
                 .title("Washer Disponible")
-                .snippet("Washer Disponible")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car_demo)));
+                .snippet("Disponible")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
 
         LatLng lugar6 = new LatLng(19.397357, -99.094824);
         marcador6 = mMap.addMarker(new MarkerOptions()
                 .position(lugar6)
-                .draggable(true)
+                .draggable(false)
                 .title("Washer Disponible")
-                .snippet("Washer Disponible")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car_demo)));
+                .snippet("Disponible")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
 
         LatLng lugar7 = new LatLng(19.397043, -99.092249);
         marcador7 = mMap.addMarker(new MarkerOptions()
                 .position(lugar7)
-                .draggable(true)
+                .draggable(false)
                 .title("Washer Disponible")
-                .snippet("Washer Disponible")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car_demo)));
+                .snippet("Disponible")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
 
         LatLng lugar8 = new LatLng(19.394665, -99.091519);
         marcador8 = mMap.addMarker(new MarkerOptions()
                 .position(lugar8)
-                .draggable(true)
+                .draggable(false)
                 .title("Washer Disponible")
-                .snippet("Washer Disponible")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car_demo)));
+                .snippet("Disponible")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
 
         LatLng lugar9 = new LatLng(19.395120, -99.089244);
         marcador9 = mMap.addMarker(new MarkerOptions()
                 .position(lugar9)
-                .draggable(true)
+                .draggable(false)
                 .title("Washer Disponible")
-                .snippet("Washer Disponible")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car_demo)));
+                .snippet("Disponible")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
 
     }
 
@@ -275,6 +278,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         actualizarUbicacion(location);
         locationManager.requestLocationUpdates(locationManager.GPS_PROVIDER,15000,0,locationListener);
 
+    }
+
+    public void onMapSearch(View view) {
+        EditText locationSearch = (EditText) findViewById(R.id.editText);
+        String location = locationSearch.getText().toString();
+        List<Address> addressList = null;
+
+        if (location != null || !location.equals("")) {
+            Geocoder geocoder = new Geocoder(this);
+            try {
+                addressList = geocoder.getFromLocationName(location, 1);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Address address = addressList.get(0);
+            LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+            mMap.addMarker(new MarkerOptions().position(latLng).title("Mi ubicacion-Solicitar servicio aqui"));
+            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+        }
     }
 }
 
