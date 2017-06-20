@@ -1,4 +1,5 @@
 package info.androidhive.firebase;
+import info.androidhive.firebase.MODELS.User;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -33,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText inputEmail, inputPassword;
 
 
-
+    private DatabaseReference mDatabase;
     private FirebaseAuth auth;
 
     //private DatabaseReference databaseReference;
@@ -65,6 +66,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         //Get Firebase auth instance
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         auth = FirebaseAuth.getInstance();
         //FirebaseAuth.getInstance().getCurrentUser();
 
@@ -179,6 +181,42 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // Check auth on Activity start
+        if (auth.getCurrentUser() != null) {
+            onAuthSuccess(auth.getCurrentUser());
+        }
+    }
+
+    private void onAuthSuccess(FirebaseUser user) {
+        String username = usernameFromEmail(user.getEmail());
+
+        // Write new user
+        writeNewUser(user.getUid(), username, user.getEmail());
+
+        // Go to MainActivity
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        finish();
+    }
+    private String usernameFromEmail(String email) {
+        if (email.contains("@")) {
+            return email.split("@")[0];
+        } else {
+            return email;
+        }
+    }
+
+    // [START basic_write]
+    private void writeNewUser(String userId, String name, String email) {
+        User user = new User(name, email);
+
+        mDatabase.child("users").child(userId).setValue(user);
+    }
+    // [END basic_write]
     //private void saveUserInformation(){
         //String correo = inputEmail.getText().toString().trim();
 

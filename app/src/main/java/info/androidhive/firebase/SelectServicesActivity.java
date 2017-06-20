@@ -82,7 +82,7 @@ public class SelectServicesActivity extends AppCompatActivity {
 
                 //RadioButton radioButton = (RadioButton) findViewById(selectedId);
                 String selected_option = rb.getText().toString().trim();
-                Intent intent = new Intent (SelectServicesActivity.this, VerificacionDatosActivity.class);
+                Intent intent = new Intent (SelectServicesActivity.this, NewPostActivity.class);
                 intent.putExtra("SELECTED_ITEM", selected_option);
                 //String fullAddressD = getIntent().getStringExtra("KEY1");
                 //intent.putExtra("KEY", fullAddressD);
